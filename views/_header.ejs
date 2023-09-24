@@ -1,0 +1,59 @@
+<header>
+  <!-- <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Placement Cell</a>
+      <% if(locals.user) { %>
+      <a class="navbar-brand" href="/profile"
+        >Hello <%= locals.user.username%></a
+      >
+      <%}%>
+
+      <form class="d-flex">
+        <a class="navbar-brand" href="/dashboard">Dashboard</a>
+        <a class="navbar-brand" href="/student/add-student">Add new Student</a>
+        <a class="navbar-brand" href="/interview/add-interview"
+          >Add Interview</a
+        >
+        <a class="navbar-brand" href="/download">Report</a>
+        <a class="navbar-brand" href="/sign-out">Signout</a>
+      </form>
+    </div>
+  </nav> -->
+
+
+  <nav class="navbar navbar-expand-lg shadow" style="background-color: rgb(26, 20, 20);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/dashboard">Dashboard</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=" navbar-toggler-icon" style="color: black !important;">🤗</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/student/add-student">Add Student</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/interview/add-interview">Add Interview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/download" tabindex="-1" aria-disabled="true">Report</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <%if(locals.user){%>
+            <a class="me-5" href="/profile"><small class="form-control me-2"><%= locals.user.username%></small></a>
+            <small class="form-control me-2"><a href="/sign-out">SignOut</a></small>
+            <%}else{%>
+              <small class="form-control me-2"><a href="/sign-out">SignIN</a></small>
+
+              <%}
+            %>
+         
+          
+          
+        </form>
+      </div>
+    </div>
+  </nav>
+
+</header>
